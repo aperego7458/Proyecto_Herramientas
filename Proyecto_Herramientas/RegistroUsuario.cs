@@ -13,13 +13,15 @@ namespace Proyecto_Herramientas
 {
     public partial class RegistroUsuario : Form
     {
-        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  database=Arrendamiento_PB; integrated security= true");
+        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        CUsuario usuario = new CUsuario();
+
         public RegistroUsuario()
         {
             InitializeComponent();
+            
         }
 
-        
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -27,49 +29,47 @@ namespace Proyecto_Herramientas
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-           
-                conn.Open();
-                int id_rol = 2;
-                string consulta = "INSERT INTO Usuarios VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)";
-                SqlCommand comando = new SqlCommand(consulta, conn);
-                comando.Parameters.AddWithValue("p1", txtCedula.Text);
-                comando.Parameters.AddWithValue("p2", txtNombre.Text);
-                comando.Parameters.AddWithValue("p3", txtApellido.Text);
-                comando.Parameters.AddWithValue("p4", txtDireccion.Text);
-                comando.Parameters.AddWithValue("p5", txtTelefono.Text);
-                comando.Parameters.AddWithValue("p6", txtEmail.Text);
-                comando.Parameters.AddWithValue("p7", txtPass1.Text);
-                comando.Parameters.AddWithValue("p8", id_rol.ToString());
+            int id_rol = 2;
+            usuario.ID = Convert.ToInt32(txtCedula.Text);
+            usuario.Nombre = txtNombre.Text;
+            usuario.Apellido = txtApellido.Text;
+            usuario.Direccion = txtDireccion.Text;
+            usuario.Telefono = Convert.ToInt32(txtTelefono.Text);
+            usuario.Email = txtEmail.Text;
+            usuario.Contrasena = txtPass1.Text;
+            usuario.Rol = id_rol;
 
-
-                if (txtPass1.Text == txtCpass.Text)
-                {
-                    comando.ExecuteNonQuery();
-                    MessageBox.Show("El usuario se registró exitosamente!!");
-                }
-                else
-                {
-                    MessageBox.Show("Las contraseñas no coinciden");
-                }
-                conn.Close();
-        }
-        
-
-        private void txtTelefono_TextChanged(object sender, EventArgs e)
-        {
-           
+            if (usuario.Contrasena == txtCpass.Text)
+            {
+                usuario.GuardarUsuario();
+                MessageBox.Show("Usuario registrado!!");
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas no coinciden!!");
+            }
         }
 
         private void txtCedula_Validated(object sender, EventArgs e)
         {
             if (txtCedula.Text.Trim() == "")
             {
-                epError.SetError(txtCedula, "Introducir cédula...");
+                epError.SetError(txtCedula, "Introducir la cédula...");
                 txtCedula.Focus();
             }
             else
             {
                 epError.Clear();
+            }
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
 
@@ -79,6 +79,84 @@ namespace Proyecto_Herramientas
             {
                 epError.SetError(txtNombre, "Introducir el nombre...");
                 txtNombre.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void txtApellido_Validated(object sender, EventArgs e)
+        {
+            if (txtApellido.Text.Trim() == "")
+            {
+                epError.SetError(txtApellido, "Introducir el apellido...");
+                txtApellido.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void txtTelefono_Validated(object sender, EventArgs e)
+        {
+            if (txtTelefono.Text.Trim() == "")
+            {
+                epError.SetError(txtTelefono, "Introducir el telefono...");
+                txtTelefono.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void txtDireccion_Validated(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text.Trim() == "")
+            {
+                epError.SetError(txtDireccion, "Introducir la dirección...");
+                txtDireccion.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmail.Text.Trim() == "")
+            {
+                epError.SetError(txtEmail, "Introducir el email...");
+                txtEmail.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void txtPass1_Validated(object sender, EventArgs e)
+        {
+            if (txtPass1.Text.Trim() == "")
+            {
+                epError.SetError(txtPass1, "Introducir la contraseña...");
+                txtPass1.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void txtCpass_Validated(object sender, EventArgs e)
+        {
+            if (txtCpass.Text.Trim() == "")
+            {
+                epError.SetError(txtCpass, "Introducir la contraseña...");
+                txtCpass.Focus();
             }
             else
             {

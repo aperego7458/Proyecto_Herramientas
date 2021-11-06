@@ -32,6 +32,7 @@ namespace Proyecto_Herramientas
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Opciones));
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnBienes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUsuarios
@@ -39,9 +40,9 @@ namespace Proyecto_Herramientas
             this.btnUsuarios.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(76, 63);
+            this.btnUsuarios.Location = new System.Drawing.Point(64, 51);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(166, 70);
+            this.btnUsuarios.Size = new System.Drawing.Size(177, 70);
             this.btnUsuarios.TabIndex = 0;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -53,20 +54,34 @@ namespace Proyecto_Herramientas
             this.btnBienes.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBienes.Image = ((System.Drawing.Image)(resources.GetObject("btnBienes.Image")));
             this.btnBienes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBienes.Location = new System.Drawing.Point(76, 171);
+            this.btnBienes.Location = new System.Drawing.Point(64, 158);
             this.btnBienes.Name = "btnBienes";
-            this.btnBienes.Size = new System.Drawing.Size(166, 70);
+            this.btnBienes.Size = new System.Drawing.Size(177, 70);
             this.btnBienes.TabIndex = 1;
             this.btnBienes.Text = "Bienes";
             this.btnBienes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBienes.UseVisualStyleBackColor = true;
             this.btnBienes.Click += new System.EventHandler(this.btnBienes_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(64, 267);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 70);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Agendamiento";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Opciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 298);
+            this.ClientSize = new System.Drawing.Size(316, 383);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBienes);
             this.Controls.Add(this.btnUsuarios);
             this.MaximizeBox = false;
@@ -81,5 +96,6 @@ namespace Proyecto_Herramientas
 
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnBienes;
+        private System.Windows.Forms.Button button1;
     }
 }

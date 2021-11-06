@@ -11,10 +11,11 @@ using System.Data.SqlClient;
 
 namespace Proyecto_Herramientas
 {
-    public partial class InicoSesion : Form
+    public partial class InicioSesion : Form
     {
-        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  database=Arrendamiento_PB; integrated security= true");
-        public InicoSesion()
+        //Hola ferney esto si cambio
+        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        public InicioSesion()
         {
             InitializeComponent();
         }
@@ -24,7 +25,7 @@ namespace Proyecto_Herramientas
             try
             {
                 conn.Open();
-                SqlCommand comando = new SqlCommand("SELECT ROL from Usuarios WHERE ID_DOCUMENTO = @p1 AND CONTRASENA = @p2 ", conn);
+                SqlCommand comando = new SqlCommand("SELECT ROL, ID_DOCUMENTO from Usuarios WHERE ID_DOCUMENTO = @p1 AND CONTRASENA = @p2 ", conn);
                 comando.Parameters.AddWithValue("p1", Id);
                 comando.Parameters.AddWithValue("p2", Contrasena);
                 SqlDataAdapter sda = new SqlDataAdapter(comando);
@@ -41,7 +42,7 @@ namespace Proyecto_Herramientas
                     }
                     else if (dt.Rows[0][0].ToString() == 2.ToString())
                     {
-                        new Bienes().Show();
+                        new Agendamiento(dt.Rows[0][1].ToString()).Show();
                     }
 
                 }
@@ -69,36 +70,6 @@ namespace Proyecto_Herramientas
         private void btnInicio_Click(object sender, EventArgs e)
         {
             logear(this.txtId.Text, this.txtPass.Text);
-        }
-
-        private void txtPass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
