@@ -19,7 +19,7 @@ namespace Proyecto_Herramientas
 
         private void label7_Click(object sender, EventArgs e)
         {
-            //
+            //nuevo ingreso
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
