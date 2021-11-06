@@ -79,6 +79,7 @@ namespace Proyecto_Herramientas
             this.btnAgregar.TabIndex = 32;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label7
             // 
