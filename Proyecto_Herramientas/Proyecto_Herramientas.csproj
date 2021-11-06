@@ -52,6 +52,14 @@
     <Compile Include="Bienes.Designer.cs">
       <DependentUpon>Bienes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Agendamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agendamiento.Designer.cs">
+      <DependentUpon>Agendamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBienes.cs" />
+    <Compile Include="CUsuario.cs" />
     <Compile Include="Opciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,16 +72,19 @@
     <Compile Include="RegistroUsuario.Designer.cs">
       <DependentUpon>RegistroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicoSesion.cs">
+    <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicoSesion.Designer.cs">
-      <DependentUpon>InicoSesion.cs</DependentUpon>
+    <Compile Include="InicioSesion.Designer.cs">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bienes.resx">
       <DependentUpon>Bienes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agendamiento.resx">
+      <DependentUpon>Agendamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Opciones.resx">
       <DependentUpon>Opciones.cs</DependentUpon>
@@ -81,8 +92,8 @@
     <EmbeddedResource Include="RegistroUsuario.resx">
       <DependentUpon>RegistroUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicoSesion.resx">
-      <DependentUpon>InicoSesion.cs</DependentUpon>
+    <EmbeddedResource Include="InicioSesion.resx">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

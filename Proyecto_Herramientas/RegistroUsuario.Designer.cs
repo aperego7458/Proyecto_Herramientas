@@ -154,6 +154,7 @@ namespace Proyecto_Herramientas
             this.txtCpass.PasswordChar = '*';
             this.txtCpass.Size = new System.Drawing.Size(124, 20);
             this.txtCpass.TabIndex = 27;
+            this.txtCpass.Validated += new System.EventHandler(this.txtCpass_Validated);
             // 
             // txtPass1
             // 
@@ -162,6 +163,7 @@ namespace Proyecto_Herramientas
             this.txtPass1.PasswordChar = '*';
             this.txtPass1.Size = new System.Drawing.Size(124, 20);
             this.txtPass1.TabIndex = 26;
+            this.txtPass1.Validated += new System.EventHandler(this.txtPass1_Validated);
             // 
             // txtEmail
             // 
@@ -169,6 +171,7 @@ namespace Proyecto_Herramientas
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(124, 20);
             this.txtEmail.TabIndex = 25;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtDireccion
             // 
@@ -176,6 +179,7 @@ namespace Proyecto_Herramientas
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(124, 20);
             this.txtDireccion.TabIndex = 24;
+            this.txtDireccion.Validated += new System.EventHandler(this.txtDireccion_Validated);
             // 
             // txtTelefono
             // 
@@ -183,7 +187,7 @@ namespace Proyecto_Herramientas
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(124, 20);
             this.txtTelefono.TabIndex = 23;
-            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
+            this.txtTelefono.Validated += new System.EventHandler(this.txtTelefono_Validated);
             // 
             // txtApellido
             // 
@@ -191,6 +195,7 @@ namespace Proyecto_Herramientas
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(124, 20);
             this.txtApellido.TabIndex = 22;
+            this.txtApellido.Validated += new System.EventHandler(this.txtApellido_Validated);
             // 
             // txtNombre
             // 
@@ -206,6 +211,7 @@ namespace Proyecto_Herramientas
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(124, 20);
             this.txtCedula.TabIndex = 20;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             this.txtCedula.Validated += new System.EventHandler(this.txtCedula_Validated);
             // 
             // label1
