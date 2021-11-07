@@ -85,7 +85,7 @@ namespace Proyecto_Herramientas
                 epError.Clear();
             }
         }
-
+        //hola sii
         private void txtApellido_Validated(object sender, EventArgs e)
         {
             if (txtApellido.Text.Trim() == "")
