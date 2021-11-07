@@ -15,7 +15,7 @@ namespace Proyecto_Herramientas
     {
         SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
         CUsuario usuario = new CUsuario();
-
+        //Neuvo
         public RegistroUsuario()
         {
             InitializeComponent();
@@ -85,7 +85,6 @@ namespace Proyecto_Herramientas
                 epError.Clear();
             }
         }
-        //hola sii
         private void txtApellido_Validated(object sender, EventArgs e)
         {
             if (txtApellido.Text.Trim() == "")
