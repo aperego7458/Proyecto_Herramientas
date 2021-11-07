@@ -93,7 +93,6 @@ namespace Proyecto_Herramientas
                 txtCbanos.Text = fila.Cells[4].Value.ToString();
                 txtPPrecio.Text = fila.Cells[5].Value.ToString();
                 txtPFotos.Text = fila.Cells[6].Value.ToString();
-               
             }
         }
 
