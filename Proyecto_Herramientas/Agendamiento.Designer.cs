@@ -32,6 +32,7 @@ namespace Proyecto_Herramientas
             this.txtIdlog = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,11 +62,18 @@ namespace Proyecto_Herramientas
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(2, 191);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 5;
+            // 
             // Agendamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtIdlog);
@@ -82,5 +90,6 @@ namespace Proyecto_Herramientas
         private System.Windows.Forms.TextBox txtIdlog;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

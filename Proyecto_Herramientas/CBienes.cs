@@ -13,6 +13,7 @@ namespace Proyecto_Herramientas
     {
         SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
 
+        private int _idBienes = 0;
         private string _ciudad = "";
         private string _direccion = "";
         private int _Chabitaciones = 0;
@@ -21,7 +22,7 @@ namespace Proyecto_Herramientas
         private string _fotos = "";
         private int _agencia = 0;
 
-
+        public int IdBienes { get { return _idBienes; } set { _idBienes = value; } }
         public string Ciudad { get { return _ciudad; } set { _ciudad = value; } }
         public string Direccion { get { return _direccion; } set { _direccion = value; } }
         public int CHabitaciones { get { return _Chabitaciones; } set { _Chabitaciones = value; } }
@@ -44,6 +45,22 @@ namespace Proyecto_Herramientas
             comando.Parameters.AddWithValue("p7", Agencia);
             comando.ExecuteNonQuery();
 
+            conn.Close();
+        }
+
+        public void ActualizarBienes()
+        {
+            conn.Open();
+            string consulta = "UPDATE Propiedades SET CIUDAD=@p1, DIRECCION=@p2, C_HABITACIONES=@p3, BANOS=@p4, PRECIO=@p5,FOTO=@p6 WHERE ID_PROPIEDAD=@p7";
+            SqlCommand comando = new SqlCommand(consulta, conn);
+            comando.Parameters.AddWithValue("p1", Ciudad);
+            comando.Parameters.AddWithValue("p2", Direccion);
+            comando.Parameters.AddWithValue("p3", CHabitaciones);
+            comando.Parameters.AddWithValue("p4", CBanos);
+            comando.Parameters.AddWithValue("p5", Precio);
+            comando.Parameters.AddWithValue("p6", Fotos);
+            comando.Parameters.AddWithValue("p7", IdBienes);
+            comando.ExecuteNonQuery();
             conn.Close();
         }
 

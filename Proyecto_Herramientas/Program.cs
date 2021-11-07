@@ -16,7 +16,7 @@ namespace Proyecto_Herramientas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InicioSesion());
+            Application.Run(new Bienes());
         }
     }
 }
