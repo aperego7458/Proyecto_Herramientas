@@ -13,7 +13,7 @@ namespace Proyecto_Herramientas
 {
     public partial class InicioSesion : Form
     {
-        //Hola ferney esto si cambio
+        
         SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
         public InicioSesion()
         {
