@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Proyecto_Herramientas
 {
@@ -32,6 +33,7 @@ namespace Proyecto_Herramientas
 
         public void GuardarUsuario()
         {
+            
             conn.Open();
             string consulta = "INSERT INTO Usuarios VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)";
             SqlCommand comando = new SqlCommand(consulta, conn);
@@ -44,6 +46,11 @@ namespace Proyecto_Herramientas
             comando.Parameters.AddWithValue("p7", Contrasena);
             comando.Parameters.AddWithValue("p8", Rol);
             comando.ExecuteNonQuery();
+
+            if (consulta.Equals(ID))
+            {
+                MessageBox.Show("Usuario ya registrado");
+            }
 
             conn.Close();
         }
