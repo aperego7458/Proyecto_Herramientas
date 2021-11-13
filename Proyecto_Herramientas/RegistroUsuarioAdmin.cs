@@ -21,17 +21,6 @@ namespace Proyecto_Herramientas
             InitializeComponent();
             Leer();
         }
-        public void Limpiar()
-        {
-            txtCedula.Clear();
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDireccion.Clear();
-            txtTelefono.Clear();
-            txtPass1.Clear();
-            txtRol.Clear();
-            txtEmail.Clear();
-        }
         public void Leer()
         {
             conn.Open();
@@ -43,7 +32,7 @@ namespace Proyecto_Herramientas
             adapter.Fill(resultado);
             dgvUsuarios.DataSource = resultado;
             conn.Close();
-            Limpiar();
+         
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -57,7 +46,8 @@ namespace Proyecto_Herramientas
             usuario.Contrasena = txtPass1.Text;
             usuario.Rol = Convert.ToInt32(txtRol.Text);
 
-            usuario.GuardarUsuario();
+           
+            usuario.GuardarUsuario();            
             Leer();
             conn.Close();         
         }

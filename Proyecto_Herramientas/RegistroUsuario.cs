@@ -15,23 +15,11 @@ namespace Proyecto_Herramientas
     {
         SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
         CUsuario usuario = new CUsuario();
-    
+
         public RegistroUsuario()
         {
             InitializeComponent();
-            
-        }
 
-        public void Limpiar()
-        {
-            txtCedula.Clear();
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDireccion.Clear();
-            txtTelefono.Clear();
-            txtPass1.Clear();
-            txtCpass.Clear();
-            txtEmail.Clear();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -52,13 +40,13 @@ namespace Proyecto_Herramientas
             usuario.Rol = id_rol;
 
             if (usuario.Contrasena == txtCpass.Text)
-            {
+            {      
                 usuario.GuardarUsuario();
             }
             else
             {
                 MessageBox.Show("Las contraseñas no coinciden!!");
-            }
+            }   
         
         }
 

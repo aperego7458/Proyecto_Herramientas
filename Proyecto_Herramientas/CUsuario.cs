@@ -10,7 +10,7 @@ namespace Proyecto_Herramientas
 {
     class CUsuario
     {
-        RegistroUsuario usuario = new RegistroUsuario();
+        
         SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
 
         private int _id = 0;
@@ -31,6 +31,7 @@ namespace Proyecto_Herramientas
         public string Contrasena { get { return _contrasena; } set { _contrasena = value; } }
         public int Rol { get { return _rol; } set { _rol = value; } }
      
+
         public void GuardarUsuario()
         {
             try
