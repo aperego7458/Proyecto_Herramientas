@@ -33,6 +33,7 @@ namespace Proyecto_Herramientas
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnBienes = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUsuarios
@@ -40,7 +41,7 @@ namespace Proyecto_Herramientas
             this.btnUsuarios.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(64, 51);
+            this.btnUsuarios.Location = new System.Drawing.Point(68, 21);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(177, 70);
             this.btnUsuarios.TabIndex = 0;
@@ -54,7 +55,7 @@ namespace Proyecto_Herramientas
             this.btnBienes.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBienes.Image = ((System.Drawing.Image)(resources.GetObject("btnBienes.Image")));
             this.btnBienes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBienes.Location = new System.Drawing.Point(64, 158);
+            this.btnBienes.Location = new System.Drawing.Point(68, 109);
             this.btnBienes.Name = "btnBienes";
             this.btnBienes.Size = new System.Drawing.Size(177, 70);
             this.btnBienes.TabIndex = 1;
@@ -68,19 +69,32 @@ namespace Proyecto_Herramientas
             this.button1.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(64, 267);
+            this.button1.Location = new System.Drawing.Point(68, 199);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 70);
             this.button1.TabIndex = 2;
             this.button1.Text = "Agendamiento";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(68, 287);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(177, 54);
+            this.btnCerrar.TabIndex = 3;
+            this.btnCerrar.Text = "Cerrar sesión";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // Opciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 383);
+            this.ClientSize = new System.Drawing.Size(316, 359);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBienes);
             this.Controls.Add(this.btnUsuarios);
@@ -97,5 +111,6 @@ namespace Proyecto_Herramientas
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnBienes;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

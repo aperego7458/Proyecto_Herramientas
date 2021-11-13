@@ -42,7 +42,7 @@ namespace Proyecto_Herramientas
                     }
                     else if (dt.Rows[0][0].ToString() == 2.ToString())
                     {
-                        new Agendamiento(dt.Rows[0][1].ToString()).Show();
+                        new Agenda(dt.Rows[0][1].ToString()).Show();
                     }
 
                 }

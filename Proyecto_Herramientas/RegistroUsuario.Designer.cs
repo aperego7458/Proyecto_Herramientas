@@ -187,6 +187,7 @@ namespace Proyecto_Herramientas
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(124, 20);
             this.txtTelefono.TabIndex = 23;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             this.txtTelefono.Validated += new System.EventHandler(this.txtTelefono_Validated);
             // 
             // txtApellido

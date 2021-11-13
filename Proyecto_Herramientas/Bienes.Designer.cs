@@ -29,6 +29,7 @@ namespace Proyecto_Herramientas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -49,7 +50,10 @@ namespace Proyecto_Herramientas
             this.txtCbanos = new System.Windows.Forms.TextBox();
             this.txtIdPropiedad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.epError1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBienes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -88,10 +92,10 @@ namespace Proyecto_Herramientas
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(160, 20);
+            this.label7.Font = new System.Drawing.Font("Dubai", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(218, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 24);
+            this.label7.Size = new System.Drawing.Size(123, 36);
             this.label7.TabIndex = 31;
             this.label7.Text = "Propiedades";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -162,6 +166,7 @@ namespace Proyecto_Herramientas
             this.txtPFotos.Name = "txtPFotos";
             this.txtPFotos.Size = new System.Drawing.Size(180, 20);
             this.txtPFotos.TabIndex = 23;
+            this.txtPFotos.Validated += new System.EventHandler(this.txtPFotos_Validated);
             // 
             // txtPPrecio
             // 
@@ -169,6 +174,8 @@ namespace Proyecto_Herramientas
             this.txtPPrecio.Name = "txtPPrecio";
             this.txtPPrecio.Size = new System.Drawing.Size(180, 20);
             this.txtPPrecio.TabIndex = 22;
+            this.txtPPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPPrecio_KeyPress);
+            this.txtPPrecio.Validated += new System.EventHandler(this.txtPPrecio_Validated);
             // 
             // txtPCiudad
             // 
@@ -176,6 +183,7 @@ namespace Proyecto_Herramientas
             this.txtPCiudad.Name = "txtPCiudad";
             this.txtPCiudad.Size = new System.Drawing.Size(180, 20);
             this.txtPCiudad.TabIndex = 18;
+            this.txtPCiudad.Validated += new System.EventHandler(this.txtPCiudad_Validated);
             // 
             // txtPDireccion
             // 
@@ -183,6 +191,7 @@ namespace Proyecto_Herramientas
             this.txtPDireccion.Name = "txtPDireccion";
             this.txtPDireccion.Size = new System.Drawing.Size(180, 20);
             this.txtPDireccion.TabIndex = 19;
+            this.txtPDireccion.Validated += new System.EventHandler(this.txtPDireccion_Validated);
             // 
             // btnBuscar
             // 
@@ -214,6 +223,8 @@ namespace Proyecto_Herramientas
             this.txtChabitaciones.Name = "txtChabitaciones";
             this.txtChabitaciones.Size = new System.Drawing.Size(180, 20);
             this.txtChabitaciones.TabIndex = 20;
+            this.txtChabitaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChabitaciones_KeyPress);
+            this.txtChabitaciones.Validated += new System.EventHandler(this.txtChabitaciones_Validated);
             // 
             // txtCbanos
             // 
@@ -221,6 +232,8 @@ namespace Proyecto_Herramientas
             this.txtCbanos.Name = "txtCbanos";
             this.txtCbanos.Size = new System.Drawing.Size(180, 20);
             this.txtCbanos.TabIndex = 21;
+            this.txtCbanos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCbanos_KeyPress);
+            this.txtCbanos.Validated += new System.EventHandler(this.txtCbanos_Validated);
             // 
             // txtIdPropiedad
             // 
@@ -228,22 +241,40 @@ namespace Proyecto_Herramientas
             this.txtIdPropiedad.Name = "txtIdPropiedad";
             this.txtIdPropiedad.Size = new System.Drawing.Size(139, 20);
             this.txtIdPropiedad.TabIndex = 32;
+            this.txtIdPropiedad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPropiedad_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(410, 29);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(391, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 13);
+            this.label8.Size = new System.Drawing.Size(103, 16);
             this.label8.TabIndex = 33;
             this.label8.Text = "ID PROPIEDAD";
             this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // epError1
+            // 
+            this.epError1.ContainerControl = this;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(26, 14);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(96, 32);
+            this.btnAtras.TabIndex = 62;
+            this.btnAtras.Text = "<- Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // Bienes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 483);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtIdPropiedad);
             this.Controls.Add(this.txtCbanos);
@@ -267,6 +298,7 @@ namespace Proyecto_Herramientas
             this.Name = "Bienes";
             this.Text = "Bienes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBienes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +326,7 @@ namespace Proyecto_Herramientas
         private System.Windows.Forms.TextBox txtCbanos;
         private System.Windows.Forms.TextBox txtIdPropiedad;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ErrorProvider epError1;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

@@ -108,7 +108,6 @@ namespace Proyecto_Herramientas
 
             bienes.ActualizarBienes();
             MessageBox.Show("Actualización correctamente!!");
-        
             Leer();
         }
 
@@ -156,6 +155,131 @@ namespace Proyecto_Herramientas
             comando.ExecuteNonQuery();
             conn.Close();
             Leer();
+        }
+
+        private void txtPCiudad_Validated(object sender, EventArgs e)
+        {
+            if (txtPCiudad.Text.Trim() == "")
+            {
+                epError1.SetError(txtPCiudad, "Introducir ciudad...");
+                txtPCiudad.Focus();
+            }
+            else
+            {
+                epError1.Clear();
+            }
+        }
+
+        private void txtPDireccion_Validated(object sender, EventArgs e)
+        {
+            if (txtPDireccion.Text.Trim() == "")
+            {
+                epError1.SetError(txtPDireccion, "Introducir la dirección...");
+                txtPDireccion.Focus();
+            }
+            else
+            {
+                epError1.Clear();
+            }
+        }
+
+        private void txtChabitaciones_Validated(object sender, EventArgs e)
+        {
+            if (txtChabitaciones.Text.Trim() == "")
+            {
+                epError1.SetError(txtChabitaciones, "Introducir la  cantidad...");
+                txtChabitaciones.Focus();
+            }
+            else
+            {
+                epError1.Clear();
+            }
+        }
+
+        private void txtCbanos_Validated(object sender, EventArgs e)
+        {
+            if (txtCbanos.Text.Trim() == "")
+            {
+                epError1.SetError(txtCbanos, "Introducir la  cantidad...");
+                txtCbanos.Focus();
+            }
+            else
+            {
+                epError1.Clear();
+            }
+        }
+
+        private void txtPPrecio_Validated(object sender, EventArgs e)
+        {
+            if (txtPPrecio.Text.Trim() == "")
+            {
+                epError1.SetError(txtPPrecio, "Introducir la  cantidad...");
+                txtPPrecio.Focus();
+            }
+            else
+            {
+                epError1.Clear();
+            }
+        }
+
+        private void txtPFotos_Validated(object sender, EventArgs e)
+        {
+            if (txtPFotos.Text.Trim() == "")
+            {
+                epError1.SetError(txtPFotos, "Introducir la  cantidad...");
+                txtPFotos.Focus();
+            }
+            else
+            {
+                epError1.Clear();
+            }
+        }
+
+        private void txtChabitaciones_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtCbanos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtPPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtIdPropiedad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Opciones op = new Opciones();
+            op.Show();
+            this.Hide();
         }
     }
 }

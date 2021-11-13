@@ -15,11 +15,23 @@ namespace Proyecto_Herramientas
     {
         SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
         CUsuario usuario = new CUsuario();
-        //Neuvo
+    
         public RegistroUsuario()
         {
             InitializeComponent();
             
+        }
+
+        public void Limpiar()
+        {
+            txtCedula.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDireccion.Clear();
+            txtTelefono.Clear();
+            txtPass1.Clear();
+            txtCpass.Clear();
+            txtEmail.Clear();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -42,12 +54,12 @@ namespace Proyecto_Herramientas
             if (usuario.Contrasena == txtCpass.Text)
             {
                 usuario.GuardarUsuario();
-                MessageBox.Show("Usuario registrado!!");
             }
             else
             {
                 MessageBox.Show("Las contraseñas no coinciden!!");
             }
+        
         }
 
         private void txtCedula_Validated(object sender, EventArgs e)
@@ -160,6 +172,16 @@ namespace Proyecto_Herramientas
             else
             {
                 epError.Clear();
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
     }
