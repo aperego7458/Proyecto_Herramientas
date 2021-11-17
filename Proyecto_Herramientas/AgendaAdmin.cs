@@ -191,7 +191,7 @@ namespace Proyecto_Herramientas
         private void btnModificar_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string consulta = "UPDATE Agenda SET ID_CLIENTE=@p1, ID_BIENES=@p2, FECHA=@p3, HORA=@p4 WHERE ID_AGENDA=@p5";
+            string consulta = "UPDATE Agenda SET CLIENTE=@p1, ID_BIENES=@p2, FECHA=@p3, HORA=@p4 WHERE ID_AGENDA=@p5";
             SqlCommand comando = new SqlCommand(consulta, conn);
             comando.Parameters.AddWithValue("p1", txtIdlog.Text);
             comando.Parameters.AddWithValue("p2", txtIDBienes.Text);

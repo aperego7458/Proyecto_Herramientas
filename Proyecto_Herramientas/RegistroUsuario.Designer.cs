@@ -78,6 +78,7 @@ namespace Proyecto_Herramientas
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(195, 249);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 13);
@@ -87,6 +88,7 @@ namespace Proyecto_Herramientas
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(27, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
@@ -96,6 +98,7 @@ namespace Proyecto_Herramientas
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(198, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
@@ -105,6 +108,7 @@ namespace Proyecto_Herramientas
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(30, 195);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
@@ -114,6 +118,7 @@ namespace Proyecto_Herramientas
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(195, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
@@ -123,6 +128,7 @@ namespace Proyecto_Herramientas
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(30, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
@@ -132,6 +138,7 @@ namespace Proyecto_Herramientas
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(198, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
@@ -141,6 +148,7 @@ namespace Proyecto_Herramientas
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(30, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
@@ -219,7 +227,8 @@ namespace Proyecto_Herramientas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(71, 42);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(90, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 22);
             this.label1.TabIndex = 19;
@@ -233,6 +242,7 @@ namespace Proyecto_Herramientas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(351, 377);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnRegistrarse);
@@ -256,6 +266,7 @@ namespace Proyecto_Herramientas
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegistroUsuario";
+            this.Opacity = 0.93D;
             this.Text = "Registro de usuario";
             ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
             this.ResumeLayout(false);

@@ -76,6 +76,7 @@ namespace Proyecto_Herramientas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(19, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
@@ -95,6 +96,7 @@ namespace Proyecto_Herramientas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(19, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
@@ -105,6 +107,7 @@ namespace Proyecto_Herramientas
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(19, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 16);
@@ -146,6 +149,7 @@ namespace Proyecto_Herramientas
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(19, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 16);
@@ -156,7 +160,8 @@ namespace Proyecto_Herramientas
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Dubai", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(324, 14);
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(350, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 36);
             this.label7.TabIndex = 32;
@@ -165,7 +170,7 @@ namespace Proyecto_Herramientas
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(22, 14);
+            this.button1.Location = new System.Drawing.Point(22, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 36);
             this.button1.TabIndex = 33;
@@ -177,6 +182,7 @@ namespace Proyecto_Herramientas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(923, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
@@ -191,6 +197,7 @@ namespace Proyecto_Herramientas
             this.Controls.Add(this.txtIDBienes);
             this.Controls.Add(this.txtIdlog);
             this.Name = "Agenda";
+            this.Opacity = 0.97D;
             this.Text = "Agenda";
             this.Load += new System.EventHandler(this.Agenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInmueble)).EndInit();

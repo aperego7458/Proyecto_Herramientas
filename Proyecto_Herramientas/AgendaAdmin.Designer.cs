@@ -62,6 +62,7 @@ namespace Proyecto_Herramientas
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(20, 332);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 16);
@@ -94,6 +95,7 @@ namespace Proyecto_Herramientas
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(20, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 16);
@@ -104,6 +106,7 @@ namespace Proyecto_Herramientas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(20, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
@@ -123,6 +126,7 @@ namespace Proyecto_Herramientas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(20, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 16);
@@ -158,7 +162,7 @@ namespace Proyecto_Herramientas
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(141, 408);
+            this.btnModificar.Location = new System.Drawing.Point(141, 394);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(104, 33);
             this.btnModificar.TabIndex = 27;
@@ -168,7 +172,7 @@ namespace Proyecto_Herramientas
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(74, 451);
+            this.btnEliminar.Location = new System.Drawing.Point(76, 442);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(104, 33);
             this.btnEliminar.TabIndex = 28;
@@ -216,7 +220,7 @@ namespace Proyecto_Herramientas
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(29, 407);
+            this.btnAgregar.Location = new System.Drawing.Point(29, 393);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(90, 34);
             this.btnAgregar.TabIndex = 33;
@@ -244,7 +248,7 @@ namespace Proyecto_Herramientas
             // btnAtras
             // 
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(17, 31);
+            this.btnAtras.Location = new System.Drawing.Point(17, 24);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(96, 32);
             this.btnAtras.TabIndex = 62;
@@ -256,7 +260,8 @@ namespace Proyecto_Herramientas
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Dubai", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(282, 23);
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(282, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 45);
             this.label9.TabIndex = 63;
@@ -266,6 +271,7 @@ namespace Proyecto_Herramientas
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(490, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 18);
@@ -281,6 +287,7 @@ namespace Proyecto_Herramientas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(833, 501);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label9);
@@ -304,6 +311,7 @@ namespace Proyecto_Herramientas
             this.Controls.Add(this.txtIDBienes);
             this.Controls.Add(this.txtIdlog);
             this.Name = "AgendaAdmin";
+            this.Opacity = 0.93D;
             this.Text = "AgendaAdmin";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInmuebles)).EndInit();

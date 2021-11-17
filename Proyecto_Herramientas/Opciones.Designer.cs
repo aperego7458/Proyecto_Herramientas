@@ -93,6 +93,7 @@ namespace Proyecto_Herramientas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(316, 359);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.button1);
@@ -101,6 +102,7 @@ namespace Proyecto_Herramientas
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Opciones";
+            this.Opacity = 0.93D;
             this.Text = "Opciones";
             this.ResumeLayout(false);
 
