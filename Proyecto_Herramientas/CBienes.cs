@@ -11,7 +11,9 @@ namespace Proyecto_Herramientas
 {
     class CBienes
     {
-        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  " +
+            "database=ProyectoHerramienta; " +
+            "integrated security= true");
 
         private int _idBienes = 0;
         private string _ciudad = "";
@@ -51,7 +53,11 @@ namespace Proyecto_Herramientas
         public void ActualizarBienes()
         {
             conn.Open();
-            string consulta = "UPDATE Propiedades SET CIUDAD=@p1, DIRECCION=@p2, C_HABITACIONES=@p3, BANOS=@p4, PRECIO=@p5,FOTO=@p6 WHERE ID_PROPIEDAD=@p7";
+            string consulta = "UPDATE Propiedades SET CIUDAD=@p1, " +
+                "DIRECCION=@p2, C_HABITACIONES=@p3, BANOS=@p4, " +
+                "PRECIO=@p5,FOTO=@p6 " +
+                "WHERE ID_PROPIEDAD=@p7";
+
             SqlCommand comando = new SqlCommand(consulta, conn);
             comando.Parameters.AddWithValue("p1", Ciudad);
             comando.Parameters.AddWithValue("p2", Direccion);
@@ -63,9 +69,5 @@ namespace Proyecto_Herramientas
             comando.ExecuteNonQuery();
             conn.Close();
         }
-
-
-
-
     }
 }

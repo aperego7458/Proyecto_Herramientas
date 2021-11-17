@@ -13,9 +13,12 @@ namespace Proyecto_Herramientas
 {
     public partial class RegistroUsuarioAdmin : Form
     {
-        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  " +
+            "database=ProyectoHerramienta; integrated security= true");
+
         CUsuario usuario = new CUsuario();
         public int idUser = 0;
+
         public RegistroUsuarioAdmin()
         {
             InitializeComponent();

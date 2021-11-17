@@ -11,7 +11,9 @@ namespace Proyecto_Herramientas
     class CUsuario
     {
         
-        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  " +
+            "database=ProyectoHerramienta; " +
+            "integrated security= true");
 
         private int _id = 0;
         private string _nombre = "";
@@ -64,7 +66,11 @@ namespace Proyecto_Herramientas
         public void ActualizarUsuarios()
         {
             conn.Open();
-            string consulta = "UPDATE Usuarios SET ID_DOCUMENTO=@p1, NOMBRE=@p2, APELLIDO=@p3, DIRECCION=@p4, TELEFONO=@p5, EMAIL=@p6, CONTRASENA=@p7, ROL=@p8 WHERE ID_DOCUMENTO=@p9";
+            string consulta = "UPDATE Usuarios SET ID_DOCUMENTO=@p1, " +
+                "NOMBRE=@p2, APELLIDO=@p3, DIRECCION=@p4, " +
+                "TELEFONO=@p5, EMAIL=@p6, CONTRASENA=@p7, ROL=@p8 " +
+                "WHERE ID_DOCUMENTO=@p9";
+
             SqlCommand comando = new SqlCommand(consulta, conn);
             comando.Parameters.AddWithValue("p1", ID);
             comando.Parameters.AddWithValue("p2", Nombre);
@@ -78,7 +84,5 @@ namespace Proyecto_Herramientas
             comando.ExecuteNonQuery();
             conn.Close();
         }
-
-
     }
 }

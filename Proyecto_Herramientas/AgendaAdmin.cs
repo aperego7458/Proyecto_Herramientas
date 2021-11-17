@@ -13,7 +13,10 @@ namespace Proyecto_Herramientas
 {
     public partial class AgendaAdmin : Form
     {
-        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  " +
+            "database=ProyectoHerramienta; " +
+            "integrated security= true");
+
         public int id_agenda = 0;
         public AgendaAdmin()
         {
@@ -22,12 +25,14 @@ namespace Proyecto_Herramientas
             LeerPropiedad();
             LeerCitas();
         }
+
         public void limpiar()
         {
             txtIdAgenda.Clear();
             txtIDBienes.Clear();
             txtIdlog.Clear();
         }
+
         public void LeerCitas()
         {
             conn.Open();
@@ -41,6 +46,7 @@ namespace Proyecto_Herramientas
             conn.Close();
             limpiar();
         }
+
         public void Leer()
         {
             conn.Open();
@@ -52,7 +58,8 @@ namespace Proyecto_Herramientas
             adapter.Fill(resultado);
             dgvClientes.DataSource = resultado;
             conn.Close();
-        }
+        } 
+
         public void LeerPropiedad()
         {
             conn.Open();
@@ -66,6 +73,7 @@ namespace Proyecto_Herramientas
             conn.Close();
 
         }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -191,7 +199,9 @@ namespace Proyecto_Herramientas
         private void btnModificar_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string consulta = "UPDATE Agenda SET CLIENTE=@p1, ID_BIENES=@p2, FECHA=@p3, HORA=@p4 WHERE ID_AGENDA=@p5";
+            string consulta = "UPDATE Agenda SET CLIENTE=@p1, " +
+                "ID_BIENES=@p2, FECHA=@p3, HORA=@p4 " +
+                "WHERE ID_AGENDA=@p5";
             SqlCommand comando = new SqlCommand(consulta, conn);
             comando.Parameters.AddWithValue("p1", txtIdlog.Text);
             comando.Parameters.AddWithValue("p2", txtIDBienes.Text);
@@ -201,6 +211,8 @@ namespace Proyecto_Herramientas
             comando.ExecuteNonQuery();
             conn.Close();
             LeerCitas();
+
+            MessageBox.Show("Agenda modificada correctamente...");
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

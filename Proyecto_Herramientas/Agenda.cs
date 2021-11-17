@@ -14,17 +14,22 @@ namespace Proyecto_Herramientas
 {
     public partial class Agenda : Form
     {
-        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  " +
+            "database=ProyectoHerramienta; " +
+            "integrated security= true");
+
         public Agenda(string idUsuario)
         {
             InitializeComponent();
             txtIdlog.Text = idUsuario.ToString();
             Leer();
         }
+
         public void Limpiar()
         {
             txtIDBienes.Clear();
         }
+
         public void Leer()
         {
             conn.Open();

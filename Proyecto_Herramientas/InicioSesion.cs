@@ -14,7 +14,9 @@ namespace Proyecto_Herramientas
     public partial class InicioSesion : Form
     {
         
-        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  " +
+            "database=ProyectoHerramienta; integrated security= true");
+
         public InicioSesion()
         {
             InitializeComponent();
@@ -25,7 +27,9 @@ namespace Proyecto_Herramientas
             try
             {
                 conn.Open();
-                SqlCommand comando = new SqlCommand("SELECT ROL, ID_DOCUMENTO from Usuarios WHERE ID_DOCUMENTO = @p1 AND CONTRASENA = @p2 ", conn);
+                SqlCommand comando = new SqlCommand("SELECT ROL, ID_DOCUMENTO " +
+                    "from Usuarios WHERE ID_DOCUMENTO = @p1 AND CONTRASENA = @p2 ", conn);
+
                 comando.Parameters.AddWithValue("p1", Id);
                 comando.Parameters.AddWithValue("p2", Contrasena);
                 SqlDataAdapter sda = new SqlDataAdapter(comando);

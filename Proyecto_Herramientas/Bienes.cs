@@ -13,7 +13,10 @@ namespace Proyecto_Herramientas
 {
     public partial class Bienes : Form
     {
-        SqlConnection conn = new SqlConnection("server=DESKTOP-U6MQJK7;  database=ProyectoHerramienta; integrated security= true");
+        SqlConnection conn = new SqlConnection("server=DESKTOP-7ROJSEE;  " +
+            "database=ProyectoHerramienta; " +
+            "integrated security= true");
+
         CBienes bienes = new CBienes();
         public int idBien = 0;
 
@@ -53,7 +56,7 @@ namespace Proyecto_Herramientas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            int id_agencia = 11111;
+            int id_agencia = 1111;
             bienes.Ciudad = txtPCiudad.Text;
             bienes.Direccion = txtPDireccion.Text;
             bienes.CHabitaciones = Convert.ToInt32(txtChabitaciones.Text);
